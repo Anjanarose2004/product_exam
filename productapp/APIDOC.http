@@ -1,0 +1,44 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"Anjana",
+    "email":"anjana@gmail.com",
+    "password":"anjana@123"
+}
+
+###
+POST http://127.0.0.1:8000/products/
+Content-Type: application/json
+Authorization: Token
+
+{
+    "product_name":"laptop",
+    "product_code":101,
+    "category":"smart device",
+    "price":45222,
+    "stock_quantity":2
+}
+
+###
+GET  http://127.0.0.1:8000/products/
+Authorization: Token
+
+###
+PUT http://127.0.0.1:8000/products/1/
+Content-Type: application/json
+Authorization: Token
+
+{
+    "product_name":"laptop",
+    "product_code":101,
+    "category":"smart device",
+    "price":45222,
+    "stock_quantity":2
+}
+
+
+###
+DELETE  http://127.0.0.1:8000/products/1/
+Authorization: Token
